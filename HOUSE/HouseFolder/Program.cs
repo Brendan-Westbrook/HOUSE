@@ -21,7 +21,7 @@ namespace HOUSE.House
             Clear();
             FlickerText("Welcome to house...", 500);
             Momo.Showmomo();
-            FlickerText("Welcome to house...", 500);
+            FlickerText("Welcome to house...", 250);
             RunHouseMenu();
         }
         public static void RunHouseMenu()
@@ -32,8 +32,8 @@ namespace HOUSE.House
             Console.WriteLine("1. Play");
             Console.WriteLine("2. Instructions");
             Console.WriteLine("3. Settings");
-            Console.WriteLine("4. Quit");
-            Console.WriteLine("5. Dev");
+            Console.WriteLine("4. Dev");
+            Console.WriteLine("5. Quit");
 
             var key = ReadMenuKey(
             ConsoleKey.D1, ConsoleKey.NumPad1,
@@ -52,22 +52,22 @@ namespace HOUSE.House
 
                 case ConsoleKey.D2:
                 case ConsoleKey.NumPad2:
-                    RunHouseSettings();
+                    RunHouseInstructions();
                     break;
 
                 case ConsoleKey.D3:
                 case ConsoleKey.NumPad3:
-                    RunHouseInstructions();
+                    RunHouseSettings();
                     break;
 
                 case ConsoleKey.D4:
                 case ConsoleKey.NumPad4:
-                    Environment.Exit(0);
+                    DevMode.RunDevMode();
                     break;
 
                 case ConsoleKey.D5:
                 case ConsoleKey.NumPad5:
-                    DevMode.RunDevMode();
+                    Environment.Exit(0);
                     break;
             }
         }
@@ -158,8 +158,7 @@ namespace HOUSE.House
         }
         public static void RunHouseInstructions()
         {
-            UnderConstruction();
-            RunHouseMenu();
+            HouseFolder.HouseInstructions.RunHouseInstructions();
         }
     }
 }

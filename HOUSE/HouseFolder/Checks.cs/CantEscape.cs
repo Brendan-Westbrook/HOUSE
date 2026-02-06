@@ -13,6 +13,7 @@ namespace HOUSE.House.Checks.cs
         {
             Thread.Sleep(1000);
             Console.Clear();
+            Console.ResetColor();
 
             TypeTextColored("'....'\n", 70, ConsoleColor.Red);
             Thread.Sleep(1000);
@@ -28,8 +29,6 @@ namespace HOUSE.House.Checks.cs
 
             TypeTextColoredFlashing("WELCOME TO OUR HOUSE...\n", 100, new[] { ConsoleColor.Red, ConsoleColor.DarkRed, ConsoleColor.Yellow });
             Console.Clear();
-
-            House2.RunHouseMenu();
         }
     }
 }

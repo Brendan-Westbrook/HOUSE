@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using HOUSE.House.Checks.cs;
+using HOUSE.HouseFolder;
+using static HOUSE.House.Utility;
 
 namespace HOUSE.House.House
 {
@@ -11,6 +13,7 @@ namespace HOUSE.House.House
     {
         public static void RunDevMode()
         {
+            passwordChecker();
             Console.Clear();
             Console.BackgroundColor = ConsoleColor.Black;
             Console.ForegroundColor = ConsoleColor.Green;
@@ -18,20 +21,15 @@ namespace HOUSE.House.House
             Console.WriteLine("1. Back");
             Console.WriteLine("2. House");
             Console.WriteLine("3. Settings (Under Construction)");
-            Console.WriteLine("4. Instructions (Under Construction)");
-            Console.WriteLine("5. Momo");
-            Console.WriteLine("6. HOUSE.Checks.cs");
-            Console.WriteLine("Back.");
+            Console.WriteLine("4. Instructions");
+            Console.WriteLine("5. HOUSE.Checks.cs");
 
             var key = Utility.ReadMenuKey(
             ConsoleKey.D1, ConsoleKey.NumPad1,
             ConsoleKey.D2, ConsoleKey.NumPad2,
             ConsoleKey.D3, ConsoleKey.NumPad3,
             ConsoleKey.D4, ConsoleKey.NumPad4,
-            ConsoleKey.D5, ConsoleKey.NumPad5,
-            ConsoleKey.D6, ConsoleKey.NumPad6,
-            ConsoleKey.D7, ConsoleKey.NumPad7,
-            ConsoleKey.D8, ConsoleKey.NumPad8
+            ConsoleKey.D5, ConsoleKey.NumPad5
             );
 
             switch (key)
@@ -54,18 +52,11 @@ namespace HOUSE.House.House
 
                 case ConsoleKey.D4:
                 case ConsoleKey.NumPad4:
-                    Utility.UnderConstruction();
-                    RunDevMode();
+                    HouseInstructions.RunHouseInstructions();
                     break;
 
                 case ConsoleKey.D5:
                 case ConsoleKey.NumPad5:
-                    Utility.UnderConstruction();
-                    RunDevMode();
-                    break;
-
-                case ConsoleKey.D6:
-                case ConsoleKey.NumPad6:
                     Utility.UnderConstruction();
                     RunDevMode();
                     break;
@@ -84,7 +75,7 @@ namespace HOUSE.House.House
             Console.WriteLine("5. HOUSE.Checks.cs.WindowClosed.RunWindowClosed");
             Console.WriteLine("6. HOUSE.Checks.cs.WindowLocked.RunWindowLocked");
             Console.WriteLine("7. HOUSE.Checks.cs.ArmAlarm.RunArmAlarm");
-            Console.WriteLine("8. HOUSE.Checks.cs.WillCreated.RunWillCreated");
+            Console.WriteLine("7. HOUSE.Checks.cs.HideKnives.RunHideknives");
 
             var key = Utility.ReadMenuKey(
             ConsoleKey.D1, ConsoleKey.NumPad1,

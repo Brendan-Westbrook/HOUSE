@@ -6,6 +6,8 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using HOUSE.House.Checks.cs;
+using HOUSE.HouseFolder.Checks.cs;
+using HOUSE.House.House1;
 
 namespace HOUSE.House
 {
@@ -46,17 +48,26 @@ namespace HOUSE.House
             Thread.Sleep(1000);
             Console.Clear();
 
-            ArmAlarm.RunArmAlarm();
+            Checks.cs.ArmAlarm.RunArmAlarm();
 
             Thread.Sleep(1000);
             Console.Clear();
 
-            Checks.cs.WillCreated.RunWillCreated();
+            Checks.cs.KnivesHidden.RunKnivesHidden();
 
             Thread.Sleep(1000);
             Console.Clear();
 
-            Checks.cs.CantEscape.RunCantEscape();
+            if (GameState.GetGun == true)
+            {
+                GetGun.runGetGun();
+                House2.RunHouseMenu();
+            }
+            else
+            {
+                Checks.cs.CantEscape.RunCantEscape();
+                House2.RunHouseMenu();
+            }
         }
     }
 }

@@ -25,16 +25,11 @@ namespace HOUSE.House.Checks.cs
                         if (House1.GameState.WindowLocked)
                         {
                             Thread.Sleep(1000);
-                            TypeTextColored("\nYou hear the sound of the window latch catching, blocking its entrance...", 30, ConsoleColor.Red);
+                            TypeTextColored("\nYou hear the sound of the window latch catching coming from the kitchen, blocking its entrance...", 30, ConsoleColor.Red);
                             Thread.Sleep(1000);
                             TypeTextColored("\n....", 30, ConsoleColor.Red);
                             Thread.Sleep(1000);
                             TypeTextColored("\nWhere did it go....", 30, ConsoleColor.Red);
-                            Thread.Sleep(1000);
-                            Console.Clear();
-                            TypeTextColored("\n....", 30, ConsoleColor.Red);
-                            Thread.Sleep(1000);
-                            TypeTextColored("\nYou hear the sound of glass shattering....", 50, ConsoleColor.Red);
                             Thread.Sleep(1000);
                             Console.Clear();
                         }
@@ -44,11 +39,11 @@ namespace HOUSE.House.Checks.cs
                             Thread.Sleep(1000);
                             TypeTextColored("\nDid You?", 30, ConsoleColor.Red);
                             Thread.Sleep(1000);
-                            TypeTextColored("\nYou hear the window shatter as glass pieces hit the ground....", 30, ConsoleColor.Red); ;
+                            TypeTextColored("\nYou hear the window slowly slide open....", 30, ConsoleColor.Red); ;
                             Thread.Sleep(1000);
                             TypeTextColored("\nSomeone is in your house....", 30, ConsoleColor.Red);
                             Thread.Sleep(1000);
-                            TypeTextColored("\nSomone is walking on broken glass....", 30, ConsoleColor.Red);
+                            TypeTextColored("\nSomone is walking on the hardwood kitchen floor to your room....", 30, ConsoleColor.Red);
                             Thread.Sleep(1000);
                             TypeTextColored("\nIt is in your room....", 70, ConsoleColor.Red);
                             Thread.Sleep(1000);
@@ -62,11 +57,13 @@ namespace HOUSE.House.Checks.cs
                         {
                             TypeTextColored("\nYou check your pill box and remember you didn't take your memory pills....", 30, ConsoleColor.Red);
                             Thread.Sleep(1500);
-                            TypeTextColored("\nYou hear the sound of the window latch catching, blocking its entrance...", 30, ConsoleColor.Red);
+                            TypeTextColored("\nYou hear the sound of the window latch catching coming from the kitchen, blocking its entrance....", 30, ConsoleColor.Red);
                             Thread.Sleep(1000);
                             TypeTextColored("\n....", 30, ConsoleColor.Red);
                             Thread.Sleep(1000);
                             TypeTextColored("\nWhere did it go....", 30, ConsoleColor.Red);
+                            Thread.Sleep(1000);
+                            Console.Clear();
                         }
                         else
                         {
@@ -75,11 +72,11 @@ namespace HOUSE.House.Checks.cs
                             Thread.Sleep(1000);
                             TypeTextColored("\nDid You?", 30, ConsoleColor.Red);
                             Thread.Sleep(1000);
-                            TypeTextColored("\nYou hear the window shatter as glass pieces hit the ground....", 30, ConsoleColor.Red); ;
+                            TypeTextColored("\nYou hear the window slide open....", 30, ConsoleColor.Red); ;
                             Thread.Sleep(1000);
                             TypeTextColored("\nSomeone is in your house....", 30, ConsoleColor.Red);
                             Thread.Sleep(1000);
-                            TypeTextColored("\nSomone is walking on broken glass....", 30, ConsoleColor.Red);
+                            TypeTextColored("\nSomone is walking on the hardwood kitchen floor....", 30, ConsoleColor.Red);
                             Thread.Sleep(1000);
                             TypeTextColored("\nIt is in your room....", 70, ConsoleColor.Red);
                             Thread.Sleep(1000);

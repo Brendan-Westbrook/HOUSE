@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static HOUSE.House.Utility;
 
 namespace HOUSE.House.House1
 {
@@ -19,5 +20,6 @@ namespace HOUSE.House.House1
         public static bool KnifesHidden { get; set; }
         public static bool BedroomDoorLocked { get; set; }
         public static bool WillCreated { get; set; }
+        public static bool GetGun { get; set; }
     }
 }

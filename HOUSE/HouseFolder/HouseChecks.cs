@@ -13,7 +13,7 @@ namespace HOUSE.House.House1
         {
             Thread.Sleep(1000);
             Console.ForegroundColor = ConsoleColor.White;
-            Console.WriteLine("*YOUR INPUT*");
+            Console.WriteLine("*WHAT WOULD YOU LIKE TO DO...*");
             bool isGoing = true;
             while (isGoing)
             {
@@ -87,6 +87,11 @@ namespace HOUSE.House.House1
                     case var _ when input.Contains("will"):
                         GameState.WillCreated = true;
                         TypeTextColored("You wrote your will....", 30, ConsoleColor.Red);
+                        break;
+
+                    case var _ when input.Contains("gun"):
+                        GameState.GetGun = true;
+                        TypeTextColored("You found the gun huh....", 40, ConsoleColor.Red);
                         break;
                 }
             }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static HOUSE.House.Utility;
 
 namespace HOUSE.House.House
 {
@@ -27,7 +28,13 @@ namespace HOUSE.House.House
 
             Console.ResetColor();
 
-            House2.RunHouseMenu();
+            Thread.Sleep(1000);
+            TypeTextColored("=====THANKS FOR PLAYING=====" +
+                "\nEnding 1 Complete!" +
+                "\n\nThis game is a work in progress." +
+                "\nOther endings are coming soon!", 30, ConsoleColor.Yellow);
+            Thread.Sleep(1000);
+            Console.ReadKey();
         }
     }
 }

@@ -31,6 +31,9 @@ namespace HOUSE.House.Checks.cs
                             TypeTextColored("\nA soft beep echoes from the control panel....", 30, ConsoleColor.Red);
                             Thread.Sleep(1000);
                             TypeTextColored("\nA faint red glow pulses in the dark....", 30, ConsoleColor.Red);
+                            Thread.Sleep(1000);
+                            TypeTextColored("\nYou jump at the sound of the kitchen window shattering, triggering the silent alarm....", 30, ConsoleColor.Red);
+                            Thread.Sleep(1000);
                         }
                         else
                         {
@@ -40,7 +43,7 @@ namespace HOUSE.House.Checks.cs
                             Thread.Sleep(1000);
                             TypeTextColored("\nThe alarm panel is dark.... silent.... useless....", 30, ConsoleColor.Red);
                             Thread.Sleep(1000);
-                            TypeTextColored("\nA door creaks open in the distance....", 30, ConsoleColor.Red);
+                            TypeTextColored("\nThe kitchen window shatters, and no alarm goes off....", 30, ConsoleColor.Red);
                             Thread.Sleep(1000);
                             TypeTextColored("\nSomeone is in your house....", 30, ConsoleColor.Red);
                             Thread.Sleep(1000);
@@ -57,6 +60,10 @@ namespace HOUSE.House.Checks.cs
                             TypeTextColored("\nYou check the panel — the red light blinks reassuringly....", 30, ConsoleColor.Red);
                             Thread.Sleep(1000);
                             TypeTextColored("\nBut you still hear something outside....", 30, ConsoleColor.Red);
+                            Thread.Sleep(1000);
+                            TypeTextColored("\nYou go back to bed....", 30, ConsoleColor.Red);
+                            Thread.Sleep(1000);
+                            TypeTextColored("\nYou jump at the sound of the kitchen window shattering, triggering the silent alarm....", 30, ConsoleColor.Red);
                         }
                         else
                         {
@@ -65,7 +72,7 @@ namespace HOUSE.House.Checks.cs
                             Thread.Sleep(1000);
                             TypeTextColored("\nThe silence in the hall feels wrong....", 30, ConsoleColor.Red);
                             Thread.Sleep(1000);
-                            TypeTextColored("\nA door creaks open in the distance....", 30, ConsoleColor.Red);
+                            TypeTextColored("\nThen, the kitchen window shatters, and no alarm goes off....", 30, ConsoleColor.Red);
                             Thread.Sleep(1000);
                             TypeTextColored("\nSomeone is in your house....", 30, ConsoleColor.Red);
                             Thread.Sleep(1000);

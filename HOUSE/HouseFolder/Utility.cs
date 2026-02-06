@@ -53,6 +53,22 @@ namespace HOUSE.House
             Console.Clear();
         }
 
+        public static void passwordChecker()
+        {
+            string correctPassword = "letmein";
+            string endLoop = "end";
+            TypeTextColored("Enter Your Password:", 30, ConsoleColor.Green);
+            string userInput = Console.ReadLine();
+            if (userInput != correctPassword && userInput != endLoop)
+            {
+                TypeTextColored("Your Password Is Incorrect, Try Again.", 30, ConsoleColor.Red);
+                passwordChecker();
+            }else if ( userInput == endLoop)
+            {
+                House2.RunHouseMenu();
+            }
+        }
+
         public static void TypeText(string text, int delayMs)
         {
             foreach (char c in text)

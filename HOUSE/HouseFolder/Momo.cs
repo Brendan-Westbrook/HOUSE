@@ -1,6 +1,7 @@
 ﻿using HOUSE.House;
 using System;
 using System.Threading;
+using static HOUSE.House.Utility;
 
 public static class Momo
 {
@@ -13,7 +14,6 @@ public static class Momo
         bool isRunning = true;
         while (isRunning == true)
         {
-            Sounds.PlaySound(@"Sounds\jumpscare.wav", block: true);
             string[] momoArt = new[]
             {
                 "⣿⣿⣿⡉⢀⣾⣿⡟⣩⣭⣭⡈⠙⢿⣿⣿⣿⣿⣿⡿⣻⣿⣿⣿⣿⣿⣿⣿⡇⠄",
