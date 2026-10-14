@@ -10,6 +10,10 @@ namespace HOUSE.Screens
         public static void RunDevMode()
         {
             passwordChecker();
+            RunDevModeMenu();
+        }
+        public static void RunDevModeMenu()
+        {
             Console.Clear();
             Console.BackgroundColor = ConsoleColor.Black;
             Console.ForegroundColor = ConsoleColor.Green;
@@ -19,13 +23,15 @@ namespace HOUSE.Screens
             Console.WriteLine("3. Settings (Under Construction)");
             Console.WriteLine("4. Instructions");
             Console.WriteLine("5. HOUSE.Checks");
+            Console.WriteLine("6. HOUSE.Program");
 
             var key = Utility.ReadMenuKey(
             ConsoleKey.D1, ConsoleKey.NumPad1,
             ConsoleKey.D2, ConsoleKey.NumPad2,
             ConsoleKey.D3, ConsoleKey.NumPad3,
             ConsoleKey.D4, ConsoleKey.NumPad4,
-            ConsoleKey.D5, ConsoleKey.NumPad5
+            ConsoleKey.D5, ConsoleKey.NumPad5,
+            ConsoleKey.D6, ConsoleKey.NumPad6
             );
 
             switch (key)
@@ -43,7 +49,7 @@ namespace HOUSE.Screens
                 case ConsoleKey.D3:
                 case ConsoleKey.NumPad3:
                     Utility.UnderConstruction();
-                    RunDevMode();
+                    RunDevModeMenu();
                     break;
 
                 case ConsoleKey.D4:
@@ -53,8 +59,12 @@ namespace HOUSE.Screens
 
                 case ConsoleKey.D5:
                 case ConsoleKey.NumPad5:
-                    Utility.UnderConstruction();
-                    RunDevMode();
+                    RunDevModeHouseChecks();
+                    break;
+
+                case ConsoleKey.D6:
+                case ConsoleKey.NumPad6:
+                    RunDevModeHouse();
                     break;
             }
         }
@@ -69,26 +79,28 @@ namespace HOUSE.Screens
             Console.WriteLine("3. HOUSE.Checks.DoorClosed.RunDoorClosed");
             Console.WriteLine("4. HOUSE.Checks.DoorLocked.RunDoorLocked");
             Console.WriteLine("5. HOUSE.Checks.WindowClosed.RunWindowClosed");
-            Console.WriteLine("6. HOUSE.Checks.WindowLocked.RunWindowLocked");
+            Console.WriteLine("6. HOUSE.Checks.WindowLocked.RunWindowlocked");
             Console.WriteLine("7. HOUSE.Checks.ArmAlarm.RunArmAlarm");
-            Console.WriteLine("7. HOUSE.Checks.HideKnives.RunHideknives");
+            Console.WriteLine("8. HOUSE.Checks.KnivesHidden.RunKnivesHidden");
+            Console.WriteLine("9. HOUSE.Checks.WillCreated.RunWillCreated");
 
             var key = Utility.ReadMenuKey(
             ConsoleKey.D1, ConsoleKey.NumPad1,
             ConsoleKey.D2, ConsoleKey.NumPad2,
             ConsoleKey.D3, ConsoleKey.NumPad3,
             ConsoleKey.D4, ConsoleKey.NumPad4,
-            ConsoleKey.D4, ConsoleKey.NumPad5,
-            ConsoleKey.D4, ConsoleKey.NumPad6,
-            ConsoleKey.D4, ConsoleKey.NumPad7,
-            ConsoleKey.D4, ConsoleKey.NumPad8
+            ConsoleKey.D5, ConsoleKey.NumPad5,
+            ConsoleKey.D6, ConsoleKey.NumPad6,
+            ConsoleKey.D7, ConsoleKey.NumPad7,
+            ConsoleKey.D8, ConsoleKey.NumPad8,
+            ConsoleKey.D9, ConsoleKey.NumPad9
             );
 
             switch (key)
             {
                 case ConsoleKey.D1:
                 case ConsoleKey.NumPad1:
-                    RunDevMode();
+                    RunDevModeMenu();
                     break;
 
                 case ConsoleKey.D2:
@@ -123,6 +135,11 @@ namespace HOUSE.Screens
 
                 case ConsoleKey.D8:
                 case ConsoleKey.NumPad8:
+                    KnivesHidden.RunKnivesHidden();
+                    break;
+
+                case ConsoleKey.D9:
+                case ConsoleKey.NumPad9:
                     WillCreated.RunWillCreated();
                     break;
             }
@@ -145,15 +162,15 @@ namespace HOUSE.Screens
             ConsoleKey.D2, ConsoleKey.NumPad2,
             ConsoleKey.D3, ConsoleKey.NumPad3,
             ConsoleKey.D4, ConsoleKey.NumPad4,
-            ConsoleKey.D4, ConsoleKey.NumPad5,
-            ConsoleKey.D4, ConsoleKey.NumPad6
+            ConsoleKey.D5, ConsoleKey.NumPad5,
+            ConsoleKey.D6, ConsoleKey.NumPad6
             );
 
             switch (key)
             {
                 case ConsoleKey.D1:
                 case ConsoleKey.NumPad1:
-                    RunDevMode();
+                    RunDevModeMenu();
                     break;
 
                 case ConsoleKey.D2:
