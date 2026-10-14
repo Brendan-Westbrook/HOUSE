@@ -22,6 +22,13 @@ namespace HOUSE
         }
         public static void RunHouseMenu()
         {
+            while (true)
+            {
+                ShowHouseMenu();
+            }
+        }
+        static void ShowHouseMenu()
+        {
             Clear();
             Console.ResetColor();
             TypeText("Choose Your Option: ", 10);
@@ -70,6 +77,7 @@ namespace HOUSE
 
         public static void RunHouse()
         {
+            GameState.Reset();
             bool skip = false;
 
             void CheckSkip()
@@ -150,7 +158,6 @@ namespace HOUSE
         public static void RunHouseSettings()
         {
             UnderConstruction();
-            RunHouseMenu();
         }
         public static void RunHouseInstructions()
         {

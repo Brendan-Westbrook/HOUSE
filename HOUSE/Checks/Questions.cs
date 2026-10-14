@@ -21,32 +21,32 @@ namespace HOUSE.Checks
             Console.BackgroundColor = ConsoleColor.Black;
             Console.Clear();
 
-            DoorClosed.RunDoorClosed();
+            if (!DoorClosed.RunDoorClosed()) return;
 
             Thread.Sleep(1000);
             Console.Clear();
 
-            DoorLocked.RunDoorLocked();
+            if (!DoorLocked.RunDoorLocked()) return;
 
             Thread.Sleep(1000);
             Console.Clear();
 
-            WindowClosed.RunWindowClosed();
+            if (!WindowClosed.RunWindowClosed()) return;
 
             Thread.Sleep(1000);
             Console.Clear();
 
-            WindowLocked.RunWindowlocked();
+            if (!WindowLocked.RunWindowlocked()) return;
 
             Thread.Sleep(1000);
             Console.Clear();
 
-            ArmAlarm.RunArmAlarm();
+            if (!ArmAlarm.RunArmAlarm()) return;
 
             Thread.Sleep(1000);
             Console.Clear();
 
-            KnivesHidden.RunKnivesHidden();
+            if (!KnivesHidden.RunKnivesHidden()) return;
 
             Thread.Sleep(1000);
             Console.Clear();
@@ -54,12 +54,10 @@ namespace HOUSE.Checks
             if (GameState.GetGun == true)
             {
                 GetGun.runGetGun();
-                Program.RunHouseMenu();
             }
             else
             {
                 CantEscape.RunCantEscape();
-                Program.RunHouseMenu();
             }
         }
     }

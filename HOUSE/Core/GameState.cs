@@ -14,5 +14,21 @@
         public static bool BedroomDoorLocked { get; set; }
         public static bool WillCreated { get; set; }
         public static bool GetGun { get; set; }
+
+        public static void Reset()
+        {
+            LightsOff = false;
+            DoorClosed = false;
+            DoorLocked = false;
+            WindowClosed = false;
+            WindowLocked = false;
+            GarageClosed = false;
+            AlarmRigged = false;
+            DogFree = false;
+            KnifesHidden = false;
+            BedroomDoorLocked = false;
+            WillCreated = false;
+            GetGun = false;
+        }
     }
 }

@@ -6,7 +6,8 @@ namespace HOUSE.Checks
 {
     internal class KnivesHidden
     {
-        public static void RunKnivesHidden()
+        // Returns false if the player died.
+        public static bool RunKnivesHidden()
         {
             Thread.Sleep(1000);
             Console.Clear();
@@ -47,6 +48,7 @@ namespace HOUSE.Checks
                             TypeTextColored("\nSomeone is in your room....", 70, ConsoleColor.Red);
                             Thread.Sleep(1000);
                             EndGame.RunEndGame();
+                            return false;
                         }
                         break;
 
@@ -75,6 +77,7 @@ namespace HOUSE.Checks
                             TypeTextColored("\nSomeone is in your room....", 70, ConsoleColor.Red);
                             Thread.Sleep(1000);
                             EndGame.RunEndGame();
+                            return false;
                         }
                         break;
 
@@ -86,6 +89,7 @@ namespace HOUSE.Checks
                         break;
                 }
             }
+            return true;
         }
     }
 }

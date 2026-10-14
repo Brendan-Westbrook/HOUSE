@@ -6,7 +6,8 @@ namespace HOUSE.Checks
 {
     internal class ArmAlarm
     {
-        public static void RunArmAlarm()
+        // Returns false if the player died.
+        public static bool RunArmAlarm()
         {
             Thread.Sleep(1000);
             Console.Clear();
@@ -47,6 +48,7 @@ namespace HOUSE.Checks
                             TypeTextColored("\nIt is in your room....", 70, ConsoleColor.Red);
                             Thread.Sleep(1000);
                             EndGame.RunEndGame();
+                            return false;
                         }
                         break;
 
@@ -76,6 +78,7 @@ namespace HOUSE.Checks
                             TypeTextColored("\nIt is in your room....", 70, ConsoleColor.Red);
                             Thread.Sleep(1000);
                             EndGame.RunEndGame();
+                            return false;
                         }
                         break;
 
@@ -87,6 +90,7 @@ namespace HOUSE.Checks
                         break;
                 }
             }
+            return true;
         }
     }
 }

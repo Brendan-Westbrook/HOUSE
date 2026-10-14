@@ -6,7 +6,8 @@ namespace HOUSE.Checks
 {
     internal class WillCreated
     {
-        public static void RunWillCreated()
+        // Returns false if the player died.
+        public static bool RunWillCreated()
         {
             Thread.Sleep(1000);
             Console.Clear();
@@ -48,6 +49,7 @@ namespace HOUSE.Checks
                             TypeTextColored("\nSomeone is in your room....", 70, ConsoleColor.Red);
                             Thread.Sleep(1000);
                             EndGame.RunEndGame();
+                            return false;
                         }
                         break;
 
@@ -71,6 +73,7 @@ namespace HOUSE.Checks
                             TypeTextColored("\nSomeone is in your room....", 70, ConsoleColor.Red);
                             Thread.Sleep(1000);
                             EndGame.RunEndGame();
+                            return false;
                         }
                         break;
 
@@ -82,6 +85,7 @@ namespace HOUSE.Checks
                         break;
                 }
             }
+            return true;
         }
     }
 }

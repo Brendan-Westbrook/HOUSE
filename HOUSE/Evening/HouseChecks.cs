@@ -11,25 +11,22 @@ namespace HOUSE.Evening
             Thread.Sleep(1000);
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine("*WHAT WOULD YOU LIKE TO DO...*");
-            bool isGoing = true;
-            while (isGoing)
+            while (true)
             {
                 string input = Console.ReadLine().Trim().ToLower();
 
                 switch (input)
                 {
                     case var _ when input.Contains("bye") || input.Contains("end"):
-                        Program.RunHouseMenu();
-                        break;
+                        return;
 
                     case var _ when input.Contains("sleep"):
                         TypeTextColored("Your eyes close...", 40, ConsoleColor.Red);
                         Sleep(1000);
                         TypeTextColored("You drift into a deep sleep...", 20, ConsoleColor.Red);
                         Sleep(2000);
-                        isGoing = false;
                         Questions.RunQuestions();
-                        break;
+                        return;
 
                     case var _ when input.Contains("light"):
                         GameState.LightsOff = true;

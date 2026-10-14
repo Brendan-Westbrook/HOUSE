@@ -6,7 +6,8 @@ namespace HOUSE.Checks
 {
     internal class DoorClosed
     {
-        public static void RunDoorClosed()
+        // Returns false if the player died.
+        public static bool RunDoorClosed()
         {
             TypeTextColored("Did You Close The Front Door?\n", 30, ConsoleColor.Red);
 
@@ -41,6 +42,7 @@ namespace HOUSE.Checks
                             TypeTextColored("\nIt is in your room....", 70, ConsoleColor.Red);
                             Thread.Sleep(1000);
                             EndGame.RunEndGame();
+                            return false;
                         }
                         break;
 
@@ -66,6 +68,7 @@ namespace HOUSE.Checks
                             TypeTextColored("\nIt is in your room....", 70, ConsoleColor.Red);
                             Thread.Sleep(1000);
                             EndGame.RunEndGame();
+                            return false;
                         }
                         break;
 
@@ -78,7 +81,7 @@ namespace HOUSE.Checks
                         break;
                 }
             }
-
+            return true;
         }
     }
 }

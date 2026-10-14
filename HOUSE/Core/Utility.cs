@@ -47,19 +47,24 @@
             Console.Clear();
         }
 
-        public static void passwordChecker()
+        // Returns false if the player typed "end" to back out instead.
+        public static bool passwordChecker()
         {
             string correctPassword = "letmein";
             string endLoop = "end";
-            TypeTextColored("Enter Your Password:", 30, ConsoleColor.Green);
-            string userInput = Console.ReadLine();
-            if (userInput != correctPassword && userInput != endLoop)
+            while (true)
             {
+                TypeTextColored("Enter Your Password:", 30, ConsoleColor.Green);
+                string userInput = Console.ReadLine();
+                if (userInput == correctPassword)
+                {
+                    return true;
+                }
+                if (userInput == endLoop)
+                {
+                    return false;
+                }
                 TypeTextColored("Your Password Is Incorrect, Try Again.", 30, ConsoleColor.Red);
-                passwordChecker();
-            }else if ( userInput == endLoop)
-            {
-                Program.RunHouseMenu();
             }
         }
 

@@ -22,7 +22,6 @@ namespace HOUSE.Screens
             Console.ReadKey(true);
             TypeTextColored("*returning*", 30, ConsoleColor.Green);
             Sleep(1000);
-            Program.RunHouseMenu();
         }
     }
 }
