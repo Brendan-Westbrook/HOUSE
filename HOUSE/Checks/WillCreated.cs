@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static HOUSE.House.Utility;
+﻿using HOUSE.Core;
+using HOUSE.Endings;
+using static HOUSE.Core.Utility;
 
-namespace HOUSE.House.Checks.cs
+namespace HOUSE.Checks
 {
     internal class WillCreated
     {
@@ -25,7 +22,7 @@ namespace HOUSE.House.Checks.cs
                 {
                     case "yes":
                         validInputWill = true;
-                        if (House1.GameState.WillCreated)
+                        if (GameState.WillCreated)
                         {
                             Thread.Sleep(1000);
                             TypeTextColored("\nThe papers sit neatly on your desk....", 30, ConsoleColor.Red);
@@ -50,13 +47,13 @@ namespace HOUSE.House.Checks.cs
                             Thread.Sleep(1000);
                             TypeTextColored("\nSomeone is in your room....", 70, ConsoleColor.Red);
                             Thread.Sleep(1000);
-                            House.EndGame.RunEndGame();
+                            EndGame.RunEndGame();
                         }
                         break;
 
                     case "no":
                         validInputWill = true;
-                        if (House1.GameState.WillCreated)
+                        if (GameState.WillCreated)
                         {
                             TypeTextColored("\nYou already wrote it. Even if you try to deny it....", 30, ConsoleColor.Red);
                             Thread.Sleep(1000);
@@ -73,7 +70,7 @@ namespace HOUSE.House.Checks.cs
                             Thread.Sleep(1000);
                             TypeTextColored("\nSomeone is in your room....", 70, ConsoleColor.Red);
                             Thread.Sleep(1000);
-                            House.EndGame.RunEndGame();
+                            EndGame.RunEndGame();
                         }
                         break;
 

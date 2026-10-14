@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static HOUSE.House.Utility;
-using HOUSE.House.House1;
-using HOUSE.House.House;
+﻿using static HOUSE.Core.Utility;
 
-namespace HOUSE.HouseFolder
+namespace HOUSE.Screens
 {
     internal class HouseInstructions
     {
@@ -29,7 +22,7 @@ namespace HOUSE.HouseFolder
             Console.ReadKey(true);
             TypeTextColored("*returning*", 30, ConsoleColor.Green);
             Sleep(1000);
-            House.House2.RunHouseMenu();
+            Program.RunHouseMenu();
         }
     }
 }

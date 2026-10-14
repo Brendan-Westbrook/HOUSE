@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using HOUSE.House.Checks.cs;
-using HOUSE.HouseFolder;
-using static HOUSE.House.Utility;
+﻿using HOUSE.Checks;
+using HOUSE.Core;
+using HOUSE.Endings;
+using static HOUSE.Core.Utility;
 
-namespace HOUSE.House.House
+namespace HOUSE.Screens
 {
     internal class DevMode
     {
@@ -22,7 +18,7 @@ namespace HOUSE.House.House
             Console.WriteLine("2. House");
             Console.WriteLine("3. Settings (Under Construction)");
             Console.WriteLine("4. Instructions");
-            Console.WriteLine("5. HOUSE.Checks.cs");
+            Console.WriteLine("5. HOUSE.Checks");
 
             var key = Utility.ReadMenuKey(
             ConsoleKey.D1, ConsoleKey.NumPad1,
@@ -36,12 +32,12 @@ namespace HOUSE.House.House
             {
                 case ConsoleKey.D1:
                 case ConsoleKey.NumPad1:
-                    House2.RunHouseMenu();
+                    Program.RunHouseMenu();
                     break;
 
                 case ConsoleKey.D2:
                 case ConsoleKey.NumPad2:
-                    House2.RunHouse();
+                    Program.RunHouse();
                     break;
 
                 case ConsoleKey.D3:
@@ -69,13 +65,13 @@ namespace HOUSE.House.House
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("==DevMode==");
             Console.WriteLine("1. Back");
-            Console.WriteLine("2. HOUSE.Checks.cs.CantEscape.RunCantEscape");
-            Console.WriteLine("3. HOUSE.Checks.cs.DoorClosed.RunDoorClosed");
-            Console.WriteLine("4. HOUSE.Checks.cs.DoorLocked.RunDoorLocked");
-            Console.WriteLine("5. HOUSE.Checks.cs.WindowClosed.RunWindowClosed");
-            Console.WriteLine("6. HOUSE.Checks.cs.WindowLocked.RunWindowLocked");
-            Console.WriteLine("7. HOUSE.Checks.cs.ArmAlarm.RunArmAlarm");
-            Console.WriteLine("7. HOUSE.Checks.cs.HideKnives.RunHideknives");
+            Console.WriteLine("2. HOUSE.Endings.CantEscape.RunCantEscape");
+            Console.WriteLine("3. HOUSE.Checks.DoorClosed.RunDoorClosed");
+            Console.WriteLine("4. HOUSE.Checks.DoorLocked.RunDoorLocked");
+            Console.WriteLine("5. HOUSE.Checks.WindowClosed.RunWindowClosed");
+            Console.WriteLine("6. HOUSE.Checks.WindowLocked.RunWindowLocked");
+            Console.WriteLine("7. HOUSE.Checks.ArmAlarm.RunArmAlarm");
+            Console.WriteLine("7. HOUSE.Checks.HideKnives.RunHideknives");
 
             var key = Utility.ReadMenuKey(
             ConsoleKey.D1, ConsoleKey.NumPad1,
@@ -97,27 +93,27 @@ namespace HOUSE.House.House
 
                 case ConsoleKey.D2:
                 case ConsoleKey.NumPad2:
-                    Checks.cs.CantEscape.RunCantEscape();
+                    CantEscape.RunCantEscape();
                     break;
 
                 case ConsoleKey.D3:
                 case ConsoleKey.NumPad3:
-                    Checks.cs.DoorClosed.RunDoorClosed();
+                    DoorClosed.RunDoorClosed();
                     break;
 
                 case ConsoleKey.D4:
                 case ConsoleKey.NumPad4:
-                    Checks.cs.DoorLocked.RunDoorLocked();
+                    DoorLocked.RunDoorLocked();
                     break;
 
                 case ConsoleKey.D5:
                 case ConsoleKey.NumPad5:
-                    Checks.cs.WindowClosed.RunWindowClosed();
+                    WindowClosed.RunWindowClosed();
                     break;
 
                 case ConsoleKey.D6:
                 case ConsoleKey.NumPad6:
-                    Checks.cs.WindowLocked.RunWindowlocked();
+                    WindowLocked.RunWindowlocked();
                     break;
 
                 case ConsoleKey.D7:
@@ -127,7 +123,7 @@ namespace HOUSE.House.House
 
                 case ConsoleKey.D8:
                 case ConsoleKey.NumPad8:
-                    Checks.cs.WillCreated.RunWillCreated();
+                    WillCreated.RunWillCreated();
                     break;
             }
         }
@@ -138,11 +134,11 @@ namespace HOUSE.House.House
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("==DevMode==");
             Console.WriteLine("1. Back");
-            Console.WriteLine("2. House.Main");
-            Console.WriteLine("3. House.RunHouseMenu");
-            Console.WriteLine("4. House.RunHouse");
-            Console.WriteLine("5. House.RunHouseSettings");
-            Console.WriteLine("6. House.RunHouseInstructions");
+            Console.WriteLine("2. Program.Main");
+            Console.WriteLine("3. Program.RunHouseMenu");
+            Console.WriteLine("4. Program.RunHouse");
+            Console.WriteLine("5. Program.RunHouseSettings");
+            Console.WriteLine("6. Program.RunHouseInstructions");
 
             var key = Utility.ReadMenuKey(
             ConsoleKey.D1, ConsoleKey.NumPad1,
@@ -162,27 +158,27 @@ namespace HOUSE.House.House
 
                 case ConsoleKey.D2:
                 case ConsoleKey.NumPad2:
-                    House2.Main();
+                    Program.Main();
                     break;
 
                 case ConsoleKey.D3:
                 case ConsoleKey.NumPad3:
-                    House2.RunHouseMenu();
+                    Program.RunHouseMenu();
                     break;
 
                 case ConsoleKey.D4:
                 case ConsoleKey.NumPad4:
-                    House2.RunHouse();
+                    Program.RunHouse();
                     break;
 
                 case ConsoleKey.D5:
                 case ConsoleKey.NumPad5:
-                    House2.RunHouseSettings();
+                    Program.RunHouseSettings();
                     break;
 
                 case ConsoleKey.D6:
                 case ConsoleKey.NumPad6:
-                    House2.RunHouseInstructions();
+                    Program.RunHouseInstructions();
                     break;
             }
         }

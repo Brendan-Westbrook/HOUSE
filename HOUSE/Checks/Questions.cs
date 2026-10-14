@@ -1,17 +1,10 @@
-﻿using System;
-using static HOUSE.House.Utility;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
-using HOUSE.House.Checks.cs;
-using HOUSE.HouseFolder.Checks.cs;
-using HOUSE.House.House1;
+﻿using HOUSE.Core;
+using HOUSE.Endings;
+using static HOUSE.Core.Utility;
 
-namespace HOUSE.House
+namespace HOUSE.Checks
 {
-    public class Questions1
+    public class Questions
     {
         public static void RunQuestions()
         {
@@ -28,32 +21,32 @@ namespace HOUSE.House
             Console.BackgroundColor = ConsoleColor.Black;
             Console.Clear();
 
-            Checks.cs.DoorClosed.RunDoorClosed();
+            DoorClosed.RunDoorClosed();
 
             Thread.Sleep(1000);
             Console.Clear();
 
-            Checks.cs.DoorLocked.RunDoorLocked();
+            DoorLocked.RunDoorLocked();
 
             Thread.Sleep(1000);
             Console.Clear();
 
-            Checks.cs.WindowClosed.RunWindowClosed();
+            WindowClosed.RunWindowClosed();
 
             Thread.Sleep(1000);
             Console.Clear();
 
-            Checks.cs.WindowLocked.RunWindowlocked();
+            WindowLocked.RunWindowlocked();
 
             Thread.Sleep(1000);
             Console.Clear();
 
-            Checks.cs.ArmAlarm.RunArmAlarm();
+            ArmAlarm.RunArmAlarm();
 
             Thread.Sleep(1000);
             Console.Clear();
 
-            Checks.cs.KnivesHidden.RunKnivesHidden();
+            KnivesHidden.RunKnivesHidden();
 
             Thread.Sleep(1000);
             Console.Clear();
@@ -61,12 +54,12 @@ namespace HOUSE.House
             if (GameState.GetGun == true)
             {
                 GetGun.runGetGun();
-                House2.RunHouseMenu();
+                Program.RunHouseMenu();
             }
             else
             {
-                Checks.cs.CantEscape.RunCantEscape();
-                House2.RunHouseMenu();
+                CantEscape.RunCantEscape();
+                Program.RunHouseMenu();
             }
         }
     }

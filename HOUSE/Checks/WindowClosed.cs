@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static HOUSE.House.Utility;
+﻿using HOUSE.Core;
+using HOUSE.Endings;
+using static HOUSE.Core.Utility;
 
-namespace HOUSE.House.Checks.cs
+namespace HOUSE.Checks
 {
     internal class WindowClosed
     {
@@ -22,7 +19,7 @@ namespace HOUSE.House.Checks.cs
                 {
                     case "yes":
                         validInput3 = true;
-                        if (House1.GameState.WindowClosed)
+                        if (GameState.WindowClosed)
                         {
                             Thread.Sleep(1000);
                             TypeTextColored("\n....", 30, ConsoleColor.Red);
@@ -43,13 +40,13 @@ namespace HOUSE.House.Checks.cs
                             Thread.Sleep(1000);
                             TypeTextColored("\nIt is in your room....", 70, ConsoleColor.Red);
                             Thread.Sleep(1000);
-                            House.EndGame.RunEndGame();
+                            EndGame.RunEndGame();
                         }
                         break;
 
                     case "no":
                         validInput3 = true;
-                        if (House1.GameState.WindowClosed)
+                        if (GameState.WindowClosed)
                         {
                             TypeTextColored("\nYou check your pill box and remember you didn't take your memory pills....", 30, ConsoleColor.Red);
                             Thread.Sleep(1500);
@@ -69,7 +66,7 @@ namespace HOUSE.House.Checks.cs
                             Thread.Sleep(1000);
                             TypeTextColored("\nIt is in your room....", 70, ConsoleColor.Red);
                             Thread.Sleep(1000);
-                            House.EndGame.RunEndGame();
+                            EndGame.RunEndGame();
 
                         }
                         break;

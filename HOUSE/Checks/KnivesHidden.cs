@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static HOUSE.House.Utility;
+﻿using HOUSE.Core;
+using HOUSE.Endings;
+using static HOUSE.Core.Utility;
 
-namespace HOUSE.House.Checks.cs
+namespace HOUSE.Checks
 {
     internal class KnivesHidden
     {
@@ -25,7 +22,7 @@ namespace HOUSE.House.Checks.cs
                 {
                     case "yes":
                         validInputWill = true;
-                        if (House1.GameState.KnifesHidden)
+                        if (GameState.KnifesHidden)
                         {
                             Thread.Sleep(1000);
                             TypeTextColored("\nIt's heavy footsteps echoe through the silent house....", 30, ConsoleColor.Red);
@@ -49,13 +46,13 @@ namespace HOUSE.House.Checks.cs
                             Thread.Sleep(1000);
                             TypeTextColored("\nSomeone is in your room....", 70, ConsoleColor.Red);
                             Thread.Sleep(1000);
-                            House.EndGame.RunEndGame();
+                            EndGame.RunEndGame();
                         }
                         break;
 
                     case "no":
                         validInputWill = true;
-                        if (House1.GameState.KnifesHidden)
+                        if (GameState.KnifesHidden)
                         {
                             TypeTextColored("\nYou can't check your pills, any noise will give you away....", 30, ConsoleColor.Red);
                             Thread.Sleep(1000);
@@ -77,7 +74,7 @@ namespace HOUSE.House.Checks.cs
                             Thread.Sleep(1000);
                             TypeTextColored("\nSomeone is in your room....", 70, ConsoleColor.Red);
                             Thread.Sleep(1000);
-                            House.EndGame.RunEndGame();
+                            EndGame.RunEndGame();
                         }
                         break;
 

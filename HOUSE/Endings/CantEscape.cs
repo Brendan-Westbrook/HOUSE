@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static HOUSE.House.Utility;
+﻿using static HOUSE.Core.Utility;
 
-namespace HOUSE.House.Checks.cs
+namespace HOUSE.Endings
 {
     internal class CantEscape
     {

@@ -1,11 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static HOUSE.House.Utility;
-
-namespace HOUSE.House.House1
+﻿namespace HOUSE.Core
 {
     public static class GameState
     {

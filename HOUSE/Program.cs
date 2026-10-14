@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static HOUSE.House.Utility;
-using HOUSE.House.House1;
-using HOUSE.House.House;
+﻿using HOUSE.Core;
+using HOUSE.Evening;
+using HOUSE.Screens;
+using static HOUSE.Core.Utility;
 
-namespace HOUSE.House
+namespace HOUSE
 {
-    public class House2
+    public class Program
     {
         public static void Main()
         {
@@ -149,7 +145,7 @@ namespace HOUSE.House
 
         End:
             Sleep(1000);
-            House1.HouseChecks.RunHouseChecks();
+            HouseChecks.RunHouseChecks();
         }
         public static void RunHouseSettings()
         {
@@ -158,7 +154,7 @@ namespace HOUSE.House
         }
         public static void RunHouseInstructions()
         {
-            HouseFolder.HouseInstructions.RunHouseInstructions();
+            HouseInstructions.RunHouseInstructions();
         }
     }
 }

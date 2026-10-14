@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static HOUSE.House.Utility;
-using HOUSE.House.House1;
-using HOUSE.House.House;
+﻿using HOUSE.Screens;
+using static HOUSE.Core.Utility;
 
-namespace HOUSE.HouseFolder.Checks.cs
+namespace HOUSE.Endings
 {
     internal class GetGun
     {

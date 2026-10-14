@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static HOUSE.House.Utility;
+﻿using HOUSE.Checks;
+using HOUSE.Core;
+using static HOUSE.Core.Utility;
 
-namespace HOUSE.House.House1
+namespace HOUSE.Evening
 {
     internal class HouseChecks
     {
@@ -22,7 +19,7 @@ namespace HOUSE.House.House1
                 switch (input)
                 {
                     case var _ when input.Contains("bye") || input.Contains("end"):
-                        House2.RunHouseMenu();
+                        Program.RunHouseMenu();
                         break;
 
                     case var _ when input.Contains("sleep"):
@@ -31,7 +28,7 @@ namespace HOUSE.House.House1
                         TypeTextColored("You drift into a deep sleep...", 20, ConsoleColor.Red);
                         Sleep(2000);
                         isGoing = false;
-                        Questions1.RunQuestions();
+                        Questions.RunQuestions();
                         break;
 
                     case var _ when input.Contains("light"):

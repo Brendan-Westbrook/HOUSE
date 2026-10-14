@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace HOUSE.House
+﻿namespace HOUSE.Core
 {
-    public class Utility
+    public static class Utility
     {
         public static void Sleep(int milliseconds)
         {
@@ -65,7 +59,7 @@ namespace HOUSE.House
                 passwordChecker();
             }else if ( userInput == endLoop)
             {
-                House2.RunHouseMenu();
+                Program.RunHouseMenu();
             }
         }
 

@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using static HOUSE.House.Utility;
+﻿using HOUSE.Core;
+using HOUSE.Endings;
+using static HOUSE.Core.Utility;
 
-namespace HOUSE.House.Checks.cs
+namespace HOUSE.Checks
 {
     internal class ArmAlarm
     {
@@ -25,7 +22,7 @@ namespace HOUSE.House.Checks.cs
                 {
                     case "yes":
                         validInputAlarm = true;
-                        if (House1.GameState.AlarmRigged)
+                        if (GameState.AlarmRigged)
                         {
                             Thread.Sleep(1000);
                             TypeTextColored("\nA soft beep echoes from the control panel....", 30, ConsoleColor.Red);
@@ -49,13 +46,13 @@ namespace HOUSE.House.Checks.cs
                             Thread.Sleep(1000);
                             TypeTextColored("\nIt is in your room....", 70, ConsoleColor.Red);
                             Thread.Sleep(1000);
-                            House.EndGame.RunEndGame();
+                            EndGame.RunEndGame();
                         }
                         break;
 
                     case "no":
                         validInputAlarm = true;
-                        if (House1.GameState.AlarmRigged)
+                        if (GameState.AlarmRigged)
                         {
                             TypeTextColored("\nYou check the panel — the red light blinks reassuringly....", 30, ConsoleColor.Red);
                             Thread.Sleep(1000);
@@ -78,7 +75,7 @@ namespace HOUSE.House.Checks.cs
                             Thread.Sleep(1000);
                             TypeTextColored("\nIt is in your room....", 70, ConsoleColor.Red);
                             Thread.Sleep(1000);
-                            House.EndGame.RunEndGame();
+                            EndGame.RunEndGame();
                         }
                         break;
 
